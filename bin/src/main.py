@@ -34,8 +34,3 @@ class News(object):
 		queries.get_country(country, self.package)
 		queries.get_language(language, self.package)
 		queries.connect(setup.urls.get("sources"), self.auth, 30, self.package)
-
-print("Enter API KEY: ")
-api_key = input()
-news = News(api_key=api_key)
-news.query_top(query="trump", page_size=1)
