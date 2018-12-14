@@ -1,3 +1,7 @@
 *.pyc
 *.pyo
 venv/
+build/
+dist/
+*.egg-info
+*.rst
