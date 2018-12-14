@@ -37,5 +37,5 @@ class News(object):
 
 print("Enter API KEY: ")
 api_key = input()
-news = News(api_key)
-news.query_top(page_size=1)
+news = News(api_key=api_key)
+news.query_top(query="trump", page_size=1)
