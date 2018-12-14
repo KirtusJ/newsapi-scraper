@@ -14,7 +14,7 @@ class News(object):
 		queries.get_country(country, self.package)
 		queries.get_page_size(page_size, self.package)
 		queries.get_page_count(page_count, self.package)
-		queries.connect(setup.urls.get("top"), self.auth, 30, self.package)
+		return queries.connect(setup.urls.get("top"), self.auth, 30, self.package)
 
 	def query_everything(self,query=None,sources=None,domains=None,exclude_domains=None,from_date=None,to_date=None,language=None,sort=None,page_count=None,page_size=None):
 		queries.get_query(query, self.package)
@@ -27,10 +27,11 @@ class News(object):
 		queries.get_sort(sort, self.package)
 		queries.get_page_size(page_size, self.package)
 		queries.get_page_count(page_count, self.package)
-		queries.connect(setup.urls.get("everything"), self.auth, 30, self.package)
+		return queries.connect(setup.urls.get("everything"), self.auth, 30, self.package)
 
 	def query_sources(self,category=None,language=None,country=None):
 		queries.get_category(category, self.package)
 		queries.get_country(country, self.package)
 		queries.get_language(language, self.package)
-		queries.connect(setup.urls.get("sources"), self.auth, 30, self.package)
+		return queries.connect(setup.urls.get("sources"), self.auth, 30, self.package)
+
