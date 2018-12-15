@@ -10,3 +10,5 @@ from scrapenewsapi import News
 news = News(api_key=api_key)
 
 news.query_top(query="trump", language="en", country="us")
+
+Returns a JSON Object
