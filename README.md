@@ -11,7 +11,7 @@ news = News(api_key=api_key)
 
 # Endpoints
 
-Endpoints return JSON Object based on the input you give them
+Endpoints return a JSON Object based on the input you give them
 
 ## query_top
 
